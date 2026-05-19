@@ -1,0 +1,11 @@
+{
+    "presets": [
+        "@babel/preset-env", // Transpile ES6+ to ES5
+        [
+            "@babel/preset-react",
+            {
+                "runtime": "automatic"
+            }
+        ] // Transpile JSX; "automatic" enables React 17+ JSX without importing React
+    ]
+}
