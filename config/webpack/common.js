@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const Dotenv = require('dotenv-webpack');
 
@@ -18,15 +17,6 @@ module.exports = {
     plugins: [
         // Clean the dist/ folder before each build
         new CleanWebpackPlugin(),
-
-        // Generate HTML file and inject bundles
-        new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../../index.html'), // Use custom HTML template
-            minify: {
-                collapseWhitespace: true, // Minify HTML in production
-                removeComments: true,
-            },
-        }),
 
         // Load environment variables from .env file
         new Dotenv(),

@@ -1,8 +1,10 @@
 const { merge } = require('webpack-merge');
 const common = require('./common');
+const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production', // Enables production optimizations (minification, tree shaking)
@@ -23,6 +25,15 @@ module.exports = merge(common, {
         // Extract CSS into separate files (instead of inlining via style-loader)
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css', // Output CSS file with hash
+        }),
+
+        // Generate HTML file and inject bundles
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../../index.html'), // Use custom HTML template
+            minify: {
+                collapseWhitespace: true, // Minify HTML in production
+                removeComments: true,
+            },
         }),
     ],
 
