@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = merge(common, {
     mode: 'production', // Enables production optimizations (minification, tree shaking)
-    devtool: 'source-map', // High-quality source maps for production (separate files)
+    devtool: 'hidden-source-map', // High-quality source maps for production (separate files)
 
     // Optimization: Minify and split code
     optimization: {
