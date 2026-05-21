@@ -5,6 +5,6 @@ function App(){
             <p>Built using manual bundler configuration and setup 🚀</p>
         </div>
     );
-};
+}
 
 export default App;
