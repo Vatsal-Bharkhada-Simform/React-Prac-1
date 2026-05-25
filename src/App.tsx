@@ -5,12 +5,14 @@ function App() {
 			<hr />
 			<h2>Name: Vatsal Bharkhada</h2>
 			<h2>
-				Hii, I am a React trainee at Simform. Check out my work using the following GitHub
-				link.
+				Hi, I am a React trainee at Simform. Check out my work using
+				the following GitHub link.
 			</h2>
 			<h2>
 				Link to my GitHub Profile:&nbsp;
-                <a href="https://github.com/vatsal-bharkhada-simform">Vatsal Bharkhada</a>
+				<a href="https://github.com/vatsal-bharkhada-simform">
+					Vatsal Bharkhada
+				</a>
 			</h2>
 			<h2>
 				Or if you want to contact me:&nbsp;
